@@ -26,8 +26,8 @@ function New-LazyModule {
     } 
 
     # Proceed with the creation
+    Write-Verbose "Creating $Psd1 at $FolderPath"
     New-Item -Type File -Path $FullPath -Force
-    Write-Verbose "Created $Psd1 at $FolderPath"
     $Path = $FullPath
   } 
   # Path has been passed, create the folder there
@@ -38,19 +38,19 @@ function New-LazyModule {
       Write-Error "Module folder already exists at $FullPath. Use -Force to continue."
       return
     } 
+    Write-Verbose "Creating $Psd1 at $FolderPath"
     New-Item -Type File -Path $FullPath -Force
-    Write-Verbose "Created $Psd1 at $FolderPath"
     $Path = $FullPath
   }
 
   # If no Author has been passed, use Git user.name otherwise use $Env:USERNAME
   if (-not $Author) {
     if (Get-Command git -ErrorAction SilentlyContinue) {
+      Write-Verbose "Adding Author $Author from Git"
       $Author = git config user.name
-      Write-Verbose "Added Author $Author from Git"
     } else {
+      Write-Verbose "Adding Author $Author from `$Env:USERNAME"
       $Author = $Env:USERNAME
-      Write-Verbose "Added Author $Author from `$Env:USERNAME"
     }
   }
 
@@ -64,8 +64,8 @@ function New-LazyModule {
       Write-Error "Module folder already exists at $FullPath. Use -Force to continue."
       return
     } 
+    Write-Verbose "Creating Junction at $FullPath"
     New-Item -ItemType Junction -Path $FullPath -Target $FolderPath -Force
-    Write-Verbose "Added Author $Author from `$Env:USERNAME"
   }
 
   New-ModuleManifest -path $Path -RootModule $Psm1 -Author $Author -Description $Description

@@ -17,6 +17,6 @@ function Remove-LazyModule {
     return
   } 
 
+  Write-Verbose "Removing Junction at $JunctionPath"
   Remove-Item $JunctionPath -Force
-  Write-Verbose "Removed Junctin at $JunctionPath"
 }
