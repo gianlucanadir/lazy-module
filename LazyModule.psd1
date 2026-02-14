@@ -12,7 +12,7 @@
 RootModule = 'LazyModule.psm1'
 
 # Version number of this module.
-ModuleVersion = '0.0.1'
+ModuleVersion = '0.1.1'
 
 # Supported PSEditions
 # CompatiblePSEditions = @()
@@ -30,7 +30,7 @@ CompanyName = 'Unknown'
 Copyright = '(c) VLGNDR. All rights reserved.'
 
 # Description of the functionality provided by this module
-Description = 'Automatic creation of a PowerShell module'
+Description = 'Quickly scaffold PowerShell modules with sensible defaults. Creates module structure, manifest, and optionally a junction into the PowerShell Modules path for seamless local development'
 
 # Minimum version of the PowerShell engine required by this module
 # PowerShellVersion = ''
