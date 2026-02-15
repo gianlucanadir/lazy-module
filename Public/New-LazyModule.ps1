@@ -14,7 +14,7 @@ function New-LazyModule {
   $Psd1Path = New-ModuleStructure -Path $Path -Name $Name -Force $Force
 
   if (-not $Author) {
-    $Author = Set-ModuleAuthor -Author $Author
+    $Author = Get-ModuleAuthor -Author $Author
   }
 
   # Create Junction to have a linked folder at the $PSModulePath
