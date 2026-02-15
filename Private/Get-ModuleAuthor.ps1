@@ -1,4 +1,4 @@
-Function Set-ModuleAuthor {
+Function Get-ModuleAuthor {
   param(
     [String]$Author
   )
