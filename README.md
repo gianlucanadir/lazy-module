@@ -14,8 +14,8 @@ were installed globally.
 
 
 ```powershell
-git clone https://github.com/vlgndr/cheatsheets.git
-Import-Module .\cheatsheets\CheatSheets.psd1
+git clone https://github.com/vlgndr/lazy-module.git
+Import-Module .\lazy-module\LazyModule.psd1
 ```
 
 ------------------------------------------------------------------------
