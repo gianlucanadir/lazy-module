@@ -10,17 +10,17 @@ were installed globally.
 
 ------------------------------------------------------------------------
 
-## 📦 Installation
+## Installation
 
 
 ```powershell
-git clone https://github.com/vlgndr/lazy-module.git
+git clone https://github.com/gianlucanadir/lazy-module.git
 Import-Module .\lazy-module\LazyModule.psd1
 ```
 
 ------------------------------------------------------------------------
 
-## ✨ Features
+## Features
 
 -   Quickly scaffold a fully structured PowerShell module
 -   Automatically generates:
@@ -33,7 +33,7 @@ Import-Module .\lazy-module\LazyModule.psd1
 
 ------------------------------------------------------------------------
 
-## 📦 Exposed Commands
+## Exposed Commands
 
 LazyModule exposes two main functions:
 
@@ -42,7 +42,7 @@ LazyModule exposes two main functions:
 
 ------------------------------------------------------------------------
 
-## 🚀 New-LazyModule
+## New-LazyModule
 
 ### Synopsis
 
@@ -72,7 +72,7 @@ New-LazyModule [[-Name] <String>] [-Path <String>] [-Author <String>] [-Descript
 
 ------------------------------------------------------------------------
 
-## 🧹 Remove-LazyModule
+## Remove-LazyModule
 
 ### Synopsis
 
@@ -94,7 +94,7 @@ Remove-LazyModule [[-Name] <String>] [<CommonParameters>]
 
 ------------------------------------------------------------------------
 
-## 📁 Generated Structure
+## Generated Structure
 
 After running `New-LazyModule`, the project structure looks like:
 
@@ -111,7 +111,7 @@ After running `New-LazyModule`, the project structure looks like:
 
 ------------------------------------------------------------------------
 
-## 🧠 Why Junctions?
+## Why Junctions?
 
 PowerShell normally expects modules inside directories listed in
 `PSModulePath`.
